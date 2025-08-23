@@ -69,21 +69,21 @@
       border-bottom: 2px solid #0d6efd;
     }
 
-    .hero-img {
-  max-width: 100%;
+.hero-img {
+  max-width: 250px;  /* desktop default */
   height: auto;
   border-radius: 12px;
 }
 
 @media (max-width: 767px) {
   .hero-img {
-    max-width: 70%;   /* Shrinks the image to 70% of container */
-    margin: 0 auto 20px auto; /* Centers image + space below */
+    max-width: 150px;   /* shrink more on mobile */
+    margin: 0 auto 15px auto; /* center + spacing */
     display: block;
   }
 
   .hero-section {
-    text-align: center; /* Center the text on mobile too */
+    text-align: center; /* Center the text on mobile */
   }
 }
 
