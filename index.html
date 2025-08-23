@@ -76,25 +76,43 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFF; border-radius: 8px; padding: 0 15px;">
-        <div class="container-fluid p-0">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav d-flex" style="gap: 40px;">
-              <li class="nav-item"><a class="nav-link" href="/ppsr.github.io/pages/portfolio.html">Portfolio</a></li>
-              <li class="nav-item"><a class="nav-link" href="/ppsr.github.io/pages/blog.html">Blog</a></li>
-              <li class="nav-item"><a class="nav-link" href="/ppsr.github.io/pages/contact.html">Contact</a></li> 
-            </ul>
-          </div>
-        </div> 
-      </nav>
-    </div>
-  </header>
+ <header>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light" 
+         style="background-color: #FFFFFF; border-radius: 12px; padding: 0 15px;">
+
+      <div class="container-fluid p-0">
+
+        <!-- ✅ Logo / Brand -->
+        <a class="navbar-brand" href="/">
+          <img src="/ppsr.github.io/assets/images/logo.png" alt="Logo" height="40">
+        </a>
+
+        <!-- ✅ Toggler (hamburger) for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- ✅ Collapsible Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto d-flex align-items-center" style="gap: 30px;">
+            <li class="nav-item">
+              <a class="nav-link" href="/ppsr.github.io/pages/portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/ppsr.github.io/pages/blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/ppsr.github.io/pages/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+</header>
 
   <!-- Hero Section -->
   <section class="hero-section py-5">
