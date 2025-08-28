@@ -9,7 +9,8 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #89CFF0;
+      background: url("cloud_bg.jpg") no-repeat center center fixed;
+      background-size: cover;
       color: #000;
       transition: background 0.3s, color 0.3s;
     }
@@ -27,7 +28,7 @@
     }
 
     .content-box {
-      background: #FFFFFF;
+      background: rgba(255, 255, 255, 0.9); /* translucent so bg shows */
       border: 1px solid #ddd;
       border-radius: 12px;
       padding: 25px;
@@ -37,7 +38,7 @@
     }
 
     footer {
-      background: #FFFFFF;
+      background: rgba(255, 255, 255, 0.9);
       color: #000000;
       text-align: center;
       padding: 15px 0;
@@ -68,7 +69,6 @@
 
     /* --- MOBILE FIXES --- */
     @media (max-width: 767px) {
-      /* Navbar compact */
       .navbar-brand img {
         width: 28px;
         height: 28px;
@@ -80,14 +80,13 @@
         padding: 4px 10px;
       }
 
-      /* Hero adjustments */
       .hero-section .row {
         text-align: left;
       }
 
       .hero-section img {
         max-width: 80px;
-        margin-bottom: 15px;  /* more breathing room */
+        margin-bottom: 15px;
         display: block;
         margin-left: 0;
         margin-right: auto;
