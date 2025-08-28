@@ -9,7 +9,8 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #89CFF0;
+      background: url("cloud_bg.jpg") no-repeat center center fixed;
+      background-size: cover;
       color: #000;
       transition: background 0.3s, color 0.3s;
     }
@@ -27,7 +28,7 @@
     }
 
     .content-box {
-      background: #FFFFFF;
+      background: rgba(255, 255, 255, 0.9); /* translucent so bg shows */
       border: 1px solid #ddd;
       border-radius: 12px;
       padding: 25px;
@@ -37,7 +38,7 @@
     }
 
     footer {
-      background: #FFFFFF;
+      background: rgba(255, 255, 255, 0.9);
       color: #000000;
       text-align: center;
       padding: 15px 0;
@@ -68,7 +69,6 @@
 
     /* --- MOBILE FIXES --- */
     @media (max-width: 767px) {
-      /* Navbar compact */
       .navbar-brand img {
         width: 28px;
         height: 28px;
@@ -80,14 +80,13 @@
         padding: 4px 10px;
       }
 
-      /* Hero adjustments */
       .hero-section .row {
         text-align: left;
       }
 
       .hero-section img {
         max-width: 100px;
-        margin-bottom: 15px;  /* more breathing room */
+        margin-bottom: 15px;
         display: block;
         margin-left: 0;
         text-align: center;
@@ -111,7 +110,6 @@
         <img src="/ppsr.github.io/logos/ppsr.png" alt="Logo" width="40" height="40" class="me-2">
         Prabal Pratap Singh Rawat
       </a>
-
 
       <!-- Mobile Hamburger -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
@@ -146,15 +144,15 @@
         <div class="col-md-6 order-2 order-md-1">
           <h1 class="fw-bold">About Me</h1>
           <p class="lead">
-          I am a final year electronics and communication engineering student. I like to make stuff.
-          Be it making websites, writing python or C/C++ scripts, designing PCBs, making model rockets and drones,
-          3D printing stuff and making parts using CAD, and more. I consider myself as a hobbiest who likes to make projects and 
-          learn new stuff along the way. 
-          <br><br>
-          This website is also one of my projects. You can check out my portfolio, blog, research, projects and whatever else I want to share on the internet.
-          My site has no ads, no AI-generated content, no affiliate links, no tracking or analytics, no sponsored posts, and no paywall. 
-          It's a space for self-expression 
-          and to share what I've learned with the world.
+            I am a final year electronics and communication engineering student. I like to make stuff.
+            Be it making websites, writing python or C/C++ scripts, designing PCBs, making model rockets and drones,
+            3D printing stuff and making parts using CAD, and more. I consider myself as a hobbiest who likes to make projects and 
+            learn new stuff along the way. 
+            <br><br>
+            This website is also one of my projects. You can check out my portfolio, blog, research, projects and whatever else I want to share on the internet.
+            My site has no ads, no AI-generated content, no affiliate links, no tracking or analytics, no sponsored posts, and no paywall. 
+            It's a space for self-expression 
+            and to share what I've learned with the world.
           </p>
         
           <div style="margin: 10px 0;">
@@ -197,5 +195,3 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-      
-    
