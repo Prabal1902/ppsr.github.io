@@ -4,349 +4,152 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>[PPSR]</title>
-  <link rel="shortcut icon" type="image/png" href="/ppsr.github.io/media/favicon.png">
+
+  <link rel="shortcut icon" href="/ppsr.github.io/media/favicon.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
   <style>
-    body {
+    body{
       font-family: Arial, sans-serif;
       background: url("/ppsr.github.io/media/cloud_bg.jpg") no-repeat center center fixed;
       background-size: cover;
-      color: #000;
-      transition: background 0.3s, color 0.3s;
     }
-
-    header {
-      padding: 0;
-      background: transparent;
-    }
-
-    nav { margin-bottom: 20px; }
-
-    section {
-      padding: 20px 0;
-      margin-bottom: 20px;
-    }
-
-    .content-box {
-      background: rgba(255, 255, 255, 0.9); /* translucent so bg shows */
-      border: 1px solid #ddd;
+    .content-box{
+      background: rgba(255,255,255,0.9);
       border-radius: 12px;
       padding: 25px;
-      max-width: 100%;
-      margin: auto;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-
-    footer {
-      background: rgba(255, 255, 255, 0.9);
-      color: #000000;
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 30px;
-    }
-
-    /* Navbar links */
-    .navbar .nav-link {
-      color: #000000;
-      transition: all 0.3s ease;
-    }
-    .navbar .nav-link:hover {
-      color: #89CFF0;
-      text-decoration: underline;
-    }
-    .navbar .nav-link.active {
-      color: #0d6efd !important;
-      font-weight: bold;
-      border-bottom: 2px solid #0d6efd;
-    }
-
-    /* Hero image */
-    .hero-img {
-      max-width: 250px;
-      height: auto;
-      border-radius: 12px;
-    }
-
-    /* --- MOBILE FIXES --- */
-    @media (max-width: 767px) {
-      .navbar-brand img {
-        width: 28px;
-        height: 28px;
-      }
-      .navbar-brand {
-        font-size: 0.9rem;
-      }
-      .navbar {
-        padding: 4px 10px;
-      }
-
-      .hero-section .row {
-        text-align: left;
-      }
-
-      .hero-section img {
-        max-width: 80px;
-        margin-bottom: 15px;
-        display: block;
-        margin-left: 0;
-        margin-right: auto;
-      }
-
-      .hero-section h1,
-      .hero-section p {
-        text-align: left;
-      }
+    footer{
+      background: rgba(255,255,255,0.9);
+      text-align:center;
+      padding:15px 0;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-    <div class="container-fluid">
-      
-      <!-- Logo + Name -->
-      <a class="navbar-brand d-flex align-items-center" href="/ppsr.github.io/index.html">
-        <img src="/ppsr.github.io/logos/ppsr.png" alt="Logo" width="40" height="40" class="me-2">
-        Prabal Pratap Singh Rawat
-      </a>
-
-      <!-- Mobile Hamburger -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Navbar links (right aligned) -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="/ppsr.github.io/pages/portfolio.html">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="/ppsr.github.io/pages/blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="/ppsr.github.io/pages/contact.html">Contact</a></li>
-        </ul>
-      </div>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="/ppsr.github.io/index.html">
+      <img src="/ppsr.github.io/logos/ppsr.png" width="40" height="40" class="me-2">
+      Prabal Pratap Singh Rawat
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/ppsr.github.io/pages/portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="/ppsr.github.io/pages/blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="/ppsr.github.io/pages/contact.html">Contact</a></li>
+      </ul>
     </div>
-  </nav>
-</header>
+  </div>
+</nav>
 
-
-  
-<section class="hero-section py-5">
+<!-- PROJECTS -->
+<section class="py-5">
   <div class="container">
     <div class="content-box">
 
+      <h2 class="text-center mb-4">Projects</h2>
 
-    <h2 class="mb-4 text-center">Projects</h2>
-    <div class="row">
-      <!-- Left Sidebar (Vertical Nav) -->
-      <div class="col-md-3">
-        <div class="nav flex-column nav-pills me-3 sidebar-nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <button class="nav-link active" id="v-pills-proj4-tab" data-bs-toggle="pill" data-bs-target="#v-pills-proj4" type="button" role="tab">P-4</button>
-          <button class="nav-link" id="v-pills-proj3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-proj3" type="button" role="tab">P-3</button>
-          <button class="nav-link" id="v-pills-proj2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-proj2" type="button" role="tab">P-2</button>
-          <button class="nav-link" id="v-pills-proj1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-proj1" type="button" role="tab">P-1</button>
+      <div class="row">
+        <!-- LEFT NAV -->
+        <div class="col-md-3">
+          <div class="nav flex-column nav-pills" role="tablist">
+            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#p4">P-4</button>
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#p3">P-3</button>
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#p2">P-2</button>
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#p1">P-1</button>
+          </div>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="col-md-9">
+          <div class="tab-content">
+
+            <!-- P4 -->
+            <div class="tab-pane fade show active" id="p4">
+              <h4><a href="/ppsr.github.io/projects/p4/p4.html">Jericho model rocket</a></h4>
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="/ppsr.github.io/media/p4/p4.png" class="img-fluid">
+                </div>
+                <div class="col-md-9">
+                  <p>Worked on CAD, propulsion and project management at Rocktry India.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- P3 -->
+            <div class="tab-pane fade" id="p3">
+              <h4><a href="/ppsr.github.io/projects/p3/p3.html">FileGrabber</a></h4>
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="/ppsr.github.io/media/p3/p3.png" class="img-fluid">
+                </div>
+                <div class="col-md-9">
+                  <p>OCR-based PDF text & table extraction tool.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- P2 -->
+            <div class="tab-pane fade" id="p2">
+              <h4><a href="/ppsr.github.io/projects/p2/p2.html">Python speech recognition</a></h4>
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="/ppsr.github.io/media/p2/p2.png" class="img-fluid">
+                </div>
+                <div class="col-md-9">
+                  <p>Basic speech recognition using SpeechRecognition and pyttsx3.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- P1 -->
+            <div class="tab-pane fade" id="p1">
+              <h4><a href="/ppsr.github.io/projects/p1/p1.html">Movie Ticketing System</a></h4>
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="/ppsr.github.io/media/p1/p1.png" class="img-fluid">
+                </div>
+                <div class="col-md-9">
+                  <p>Theatre management software built during class 12 IP practical.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
 
-
-      <!-- Right Content (Tab Content for Projects) -->
-
-          <!-- Project 1 -->
-        
-          <!-- Right Content (Tab Content for Projects) -->
-     <div class="col-md-9">
-        <div class="tab-content" id="v-pills-tabContent">
-          <div class="tab-pane fade" id="v-pills-proj1" role="tabpanel">
-  <h4>
-    <a href="/ppsr.github.io/projects/p1/p1.html">
-      Movie ticketing system (MTS)
-    </a>
-  </h4>
-
-  <div class="row align-items-start">
-    
-    <!-- Image column -->
-    <div class="col-md-3">
-      <img src="/ppsr.github.io/media/p1/p1.png"
-           class="img-fluid"
-           alt="MTS">
-    </div>
-
-    <!-- Text column -->
-   <div class="col-md-9">
-      <p>
-        <a href="/ppsr.github.io/projects/p1/p1.html">This</a>
-        is theater management software that handles movie ticket sales. Sucessfully implemented during my class 12 IP practical exam xD
-      </p>
-    </div>
-
-  </div>
-</div>
-
-          
-
-          <!-- Project 2 -->
-      <div class="col-md-9">
-        <div class="tab-content" id="v-pills-tabContent">
-          <div class="tab-pane fade" id="v-pills-proj2" role="tabpanel">
-  <h4>
-    <a href="/ppsr.github.io/projects/p2/p2.html">
-      Python speech recognition
-    </a>
-  </h4>
-
-  <div class="row align-items-start">
-    
-    <!-- Image column -->
-   <div class="col-md-3">
-      <img src="/ppsr.github.io/media/p2/p2.png"
-           class="img-fluid"
-           alt="pyhton speech recognition">
-    </div>
-
-    <!-- Text column -->
-   <div class="col-md-9">
-      <p>
-        <a href="/ppsr.github.io/projects/p2/p2.html">This</a>
-        is a simple python speech recognition project, it's a simple , project ment to teach the basics of speech 
-        recognition using python. It uses the SpeechRecognition library by Anthony Zhang and a text-to-speech (TTS) 
-        element powered by the pyttx3 library made by Natesh Bhatt. 
-      </p>
-    </div>
-
-  </div>
-</div>
-          
-      
-          <!-- Project 3 -->
-          
-      <div class="col-md-9">
-        <div class="tab-content" id="v-pills-tabContent">
-          <div class="tab-pane fade" id="v-pills-proj3" role="tabpane">
-  <h4>
-    <a href="/ppsr.github.io/projects/p3/p3.html">
-      FileGrabber - a data extraction tool
-    </a>
-  </h4>
-
-  <div class="row align-items-start">
-    
-    <!-- Image column -->
-    <div class="col-md-3">
-      <img src="/ppsr.github.io/media/p3/p3.png"
-           class="img-fluid"
-           alt="filegrabber">
-    </div>
-
-    <!-- Text column -->
-    <div class="col-md-9">
-      <p>
-        <a href="/ppsr.github.io/projects/p3/p3.html">This</a>
-        is a PDF Text and Table extraction tool that uses Optical Character Recognition (OCR).
-        Extract text and tables from PDF and images into CSV and Excel files immediately. Made for  
-        DeepLogic AI for their AI enabled office application, as an assessment.
-      </p>
-    </div>
-
-  </div>
-</div>
-          
-          
-          <!-- Project 4 -->
-          
-     <div class="col-md-9">
-        <div class="tab-content" id="v-pills-tabContent">
-          <div class="tab-pane fade show active" id="v-pills-proj4" role="tabpane">
-  <h4>
-    <a href="/ppsr.github.io/projects/p4/p4.html">
-      Jericho model rocket
-    </a>
-  </h4>
-
-  <div class="row align-items-start">
-    
-    <!-- Image column -->
-    <div class="col-md-3">
-      <img src="/ppsr.github.io/media/p4/p4.png"
-           class="img-fluid"
-           alt="Jericho model rocket">
-    </div>
-
-    <!-- Text column -->
-   <div class="col-md-9">
-      <p>
-        Worked on the <a href="/ppsr.github.io/projects/p3/p3.html">Jericho</a>  
-        model rocket as a part of Rocktry India. Worked on designing
-        parts on CAD, propulsion and project management.
-      </p>
-    </div>
-
-  </div>
-</div>
-          
-          
-          <!-- Project 5 -->
-          <!--<div class="tab-pane fade" id="v-pills-proj5" role="tabpanel">
-            <h4></h4>
-            <img src="p4.png" class="img-fluid mb-3" alt="">
-            <p></p>
-          </div>
-        </div>-->
-     <!-- </div>
-    </div>
     </div>
   </div>
 </section>
 
-
-  
-  
-
-      <!-- Section 3: Open Ideas / Call-to-Action -->
-
-  <section class="hero-section py-5">
-    <div class="container">
-      <div class="content-box">
-        <div class="row align-items-center">
-          <h2 class="mb-3" style="font-size:2rem; font-weight:bold;">Got an idea to work on?</h2>
-          <p style="font-size:1.2rem;text-align: left;">
-            If you have an idea to work on and want to collaborate, <a href="/ppsr.github.io/pages/contact.html">contact me</a>.
-          </p>
-        </div>
-      </div>
+<!-- CTA -->
+<section class="py-5">
+  <div class="container">
+    <div class="content-box">
+      <h2>Got an idea to work on?</h2>
+      <p>If you want to collaborate, <a href="/ppsr.github.io/pages/contact.html">contact me</a>.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-
-
-
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
   <p>© 2025 Prabal Pratap Singh Rawat</p>
-
-    <div style="margin: 10px 0;">
-   <a href="https://linktr.ee/prabalrawat" target="blank" class="text-black mx-2">
-              <i class="bi bi-link-45deg" style="font-size: 1.5rem;"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/ppsr/" target="_blank" class="text-black mx-2">
-              <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
-            </a>
-    </div>
+  <a href="https://linktr.ee/prabalrawat" class="mx-2"><i class="bi bi-link-45deg"></i></a>
+  <a href="https://www.linkedin.com/in/ppsr/" class="mx-2"><i class="bi bi-linkedin"></i></a>
 </footer>
 
-<script>
-  // Highlight active page
-  const currentPage = window.location.pathname.split("/").pop() || "index.html"; 
-  document.querySelectorAll('.navbar .nav-link, .navbar-brand').forEach(link => {
-    let linkPath = link.getAttribute('href').split("/").pop();
-    if (linkPath === currentPage) {
-      link.classList.add('active');
-    }
-  });
-</script>
-
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
