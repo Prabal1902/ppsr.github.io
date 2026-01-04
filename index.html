@@ -1,169 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>[PPSR]</title>
-
-  <link rel="shortcut icon" type="image/png" href="/ppsr.github.io/media/favicon.png" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-
+  <link rel="shortcut icon" type="image/png" href="/ppsr.github.io/media/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <style>
-    /* ---------- BASE ---------- */
     body {
       font-family: Arial, sans-serif;
       background: url("/ppsr.github.io/media/cloud_bg.jpg") no-repeat center center fixed;
       background-size: cover;
       color: #000;
-      margin: 0;
+      transition: background 0.3s, color 0.3s;
     }
 
+    header {
+      padding: 0;
+      background: transparent;
+    }
+
+    nav { margin-bottom: 20px; }
+
     section {
-      padding: 2rem 0;
+      padding: 20px 0;
+      margin-bottom: 20px;
     }
 
     .content-box {
-      background: rgba(255, 255, 255, 0.92);
-      border-radius: 14px;
-      padding: 2rem;
+      background: rgba(255, 255, 255, 0.9); /* translucent so bg shows */
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 25px;
       max-width: 1000px;
       margin: auto;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    /* ---------- NAVBAR ---------- */
-    .navbar-brand {
-      font-weight: 600;
+    footer {
+      background: rgba(255, 255, 255, 0.9);
+      color: #000000;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 30px;
     }
 
+    /* Navbar links */
     .navbar .nav-link {
-      color: #000;
-      transition: 0.3s;
+      color: #000000;
+      transition: all 0.3s ease;
     }
-
     .navbar .nav-link:hover {
-      color: #0d6efd;
+      color: #89CFF0;
       text-decoration: underline;
     }
-
     .navbar .nav-link.active {
-      font-weight: 600;
+      color: #0d6efd !important;
+      font-weight: bold;
       border-bottom: 2px solid #0d6efd;
     }
 
-    /* ---------- HERO ---------- */
+    /* Hero image */
     .hero-img {
       max-width: 250px;
-      width: 100%;
-      border-radius: 14px;
+      height: auto;
+      border-radius: 12px;
     }
 
-    /* ---------- FOOTER ---------- */
-    footer {
-      background: rgba(255, 255, 255, 0.92);
-      text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
-    }
-
-    /* ---------- RESPONSIVE ---------- */
-    @media (max-width: 992px) {
-      .hero-img {
-        max-width: 180px;
+    /* --- MOBILE FIXES --- */
+    @media (max-width: 767px) {
+      .navbar-brand img {
+        width: 28px;
+        height: 28px;
       }
-    }
-
-    @media (max-width: 768px) {
-      .content-box {
-        padding: 1.5rem;
+      .navbar-brand {
+        font-size: 0.9rem;
+      }
+      .navbar {
+        padding: 4px 10px;
       }
 
       .hero-section .row {
         text-align: left;
       }
 
-      .hero-img {
-        max-width: 90px;
-        margin-bottom: 1rem;
+      .hero-section img {
+        max-width: 80px;
+        margin-bottom: 15px;
+        display: block;
+        margin-left: 0;
+        margin-right: auto;
       }
 
-      h1 {
-        font-size: 1.6rem;
-      }
-
-      .lead {
-        font-size: 1rem;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .navbar-brand img {
-        width: 28px;
-        height: 28px;
-      }
-
-      .navbar-brand {
-        font-size: 0.9rem;
+      .hero-section h1,
+      .hero-section p {
+        text-align: left;
       }
     }
   </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-  <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center" href="/ppsr.github.io/index.html">
-      <img src="/ppsr.github.io/logos/ppsr.png" alt="Logo" width="40" height="40" class="me-2" />
-      Prabal Pratap Singh Rawat
-    </a>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+      
+      <!-- Logo + Name -->
+      <a class="navbar-brand d-flex align-items-center" href="/ppsr.github.io/index.html">
+        <img src="/ppsr.github.io/logos/ppsr.png" alt="Logo" width="40" height="40" class="me-2">
+        Prabal Pratap Singh Rawat
+      </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Mobile Hamburger -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="/ppsr.github.io/pages/portfolio.html">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="/ppsr.github.io/pages/blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="/ppsr.github.io/pages/contact.html">Contact</a></li>
-      </ul>
+      <!-- Navbar links (right aligned) -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/ppsr.github.io/pages/portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/ppsr.github.io/pages/blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="/ppsr.github.io/pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero-section">
+  </nav>
+</header>
+  
+<!-- Hero Section -->
+<section class="hero-section py-5">
   <div class="container">
     <div class="content-box">
-      <div class="row align-items-center g-4">
-
-        <!-- IMAGE -->
-        <div class="col-md-6 text-md-end">
-          <img src="/ppsr.github.io/logos/smile.png" alt="its-a-me" class="hero-img shadow" />
+      <div class="row align-items-center">
+        
+        <!-- Hero Image -->
+        <div class="col-md-6 order-1 order-md-2">
+          <img src="/ppsr.github.io/logos/smile.png" alt="its-a-me" class="hero-img shadow">
         </div>
 
-        <!-- TEXT -->
-        <div class="col-md-6">
+        <!-- Text -->
+        <div class="col-md-6 order-2 order-md-1">
           <h1 class="fw-bold">Hey, I'm Prabal!</h1>
           <p class="lead">
             I am a final year electronics and communication engineering student.
-            <br><br>
-            Everything on this website is written by me, not AI.
+            <br><br><br>
+            Everything on this website is written by me, not AI
           </p>
-
-          <div class="mb-3">
-            <a href="https://linktr.ee/prabalrawat" target="_blank" class="text-black me-3">
-              <i class="bi bi-link-45deg fs-4"></i>
+        
+          <div style="margin: 10px 0;">
+            <a href="https://linktr.ee/prabalrawat" target="blank" class="text-black mx-2">
+              <i class="bi bi-link-45deg" style="font-size: 1.5rem;"></i>
             </a>
-            <a href="https://www.linkedin.com/in/ppsr/" target="_blank" class="text-black">
-              <i class="bi bi-linkedin fs-4"></i>
+            <a href="https://www.linkedin.com/in/ppsr/" target="blank" class="text-black mx-2">
+              <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
             </a>
           </div>
-
-          <div>
+          
+          <div class="mt-3">
             <a href="/ppsr.github.io/pages/about.html" class="btn btn-primary me-2">About Me</a>
             <a href="/ppsr.github.io/pages/blog.html" class="btn btn-outline-secondary">Blog</a>
           </div>
@@ -174,20 +170,23 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- Footer -->
 <footer>
-  <p class="mb-0">© 2025 Prabal Pratap Singh Rawat</p>
+  <p>© 2025 Prabal Pratap Singh Rawat</p>
 </footer>
 
-<!-- ACTIVE LINK SCRIPT -->
 <script>
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".navbar a").forEach(link => {
-    const linkPage = link.getAttribute("href")?.split("/").pop();
-    if (linkPage === currentPage) link.classList.add("active");
+  // Highlight active page
+  const currentPage = window.location.pathname.split("/").pop() || "index.html"; 
+  document.querySelectorAll('.navbar .nav-link, .navbar-brand').forEach(link => {
+    let linkPath = link.getAttribute('href').split("/").pop();
+    if (linkPath === currentPage) {
+      link.classList.add('active');
+    }
   });
 </script>
 
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
